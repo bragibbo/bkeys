@@ -20,33 +20,57 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
+    combos {
+        compatible = "zmk,combos";
+
+        escape_chord {
+            bindings = <&kp ESCAPE>;
+            key-positions = <10 19>;
+        };
+
+        minus_chord {
+            bindings = <&kp UNDER>;
+            key-positions = <3 6>;
+        };
+
+        dash_chord {
+            bindings = <&kp MINUS>;
+            key-positions = <23 26>;
+        };
+
+        caps_word_chord {
+            bindings = <&caps_word>;
+            key-positions = <20 29>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q        &kp W       &kp F        &kp P       &kp B          &kp J        &kp L          &kp U        &kp Y       &kp SEMI
-&ht LSHFT A  &ht LALT R  &ht LCTRL S  &ht LGUI T  &kp G          &kp M        &ht RGUI N     &ht RCTRL E  &ht RALT I  &ht RSHFT O
-&kp Z        &kp X       &kp C        &kp D       &kp V          &kp K        &kp H          &kp COMMA    &kp DOT     &kp FSLH
-                                      &lt 3 TAB   &lt 1 SPACE    &lt 2 ENTER  &kp BACKSPACE
+&kp Q               &kp W       &kp F               &kp P             &kp B          &kp J        &kp L              &kp U                &kp Y       &kp SEMI
+&ht LEFT_CONTROL A  &ht LALT R  &ht LEFT_COMMAND S  &ht LEFT_SHIFT T  &kp G          &kp M        &ht RIGHT_SHIFT N  &ht RIGHT_COMMAND E  &ht RALT I  &ht RIGHT_CONTROL O
+&kp Z               &kp X       &kp C               &kp D             &kp V          &kp K        &kp H              &kp COMMA            &kp DOT     &kp FSLH
+                                                    &lt 3 TAB         &lt 1 ENTER    &lt 2 SPACE  &kp BACKSPACE
             >;
         };
 
         nav {
             bindings = <
-&none    &kp N1  &kp N2  &kp N3  &none     &none     &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp DEL  &kp N4  &kp N5  &kp N6  &none     &kp LEFT  &kp DOWN          &kp UP             &kp RIGHT             &none
-&none    &kp N7  &kp N8  &kp N9  &kp N0    &none     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GREATER_THAN      &kp LESS_THAN
-                         &none   &trans    &kp ESC   &none
+&none  &kp N1  &kp N2  &kp N3  &none     &none      &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&none  &kp N4  &kp N5  &kp N6  &none     &kp LEFT   &kp DOWN          &kp UP             &kp RIGHT             &none
+&none  &kp N7  &kp N8  &kp N9  &kp N0    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GREATER_THAN      &kp LESS_THAN
+                       &none   &trans    &kp SPACE  &kp BACKSPACE
             >;
         };
 
         symbol {
             bindings = <
-&kp GRAVE  &kp EXCL   &kp AT     &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE    &none    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp POUND  &kp CARET  &kp DLLR   &kp ASTERISK       &kp PERCENT         &kp TAB  &kp BACKSPACE     &kp RIGHT_SHIFT    &kp SPACE             &kp ENTER
-&kp TILDE  &kp AMPS   &kp EQUAL  &kp BACKSLASH      &kp PIPE            &none    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GREATER_THAN      &kp LESS_THAN
-                                 &kp MINUS          &kp PLUS            &trans   &none
+&kp GRAVE  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp EXCL       &kp AT          &none    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp POUND  &kp CARET          &kp EQUAL         &kp DOLLAR     &kp ASTERISK    &kp TAB  &kp BACKSPACE     &kp RIGHT_SHIFT    &kp SPACE             &kp ENTER
+&kp TILDE  &kp AMPS           &kp PERCENT       &kp BACKSLASH  &kp PIPE        &none    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GREATER_THAN      &kp LESS_THAN
+                                                &kp MINUS      &kp PLUS        &trans   &none
             >;
         };
 

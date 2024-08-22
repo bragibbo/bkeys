@@ -82,10 +82,10 @@
 
         func_toggle {
             bindings = <
-&kp F1                &kp F2                &kp F3                             &kp F4                                  &kp F5    &kp F6  &kp F7  &kp F8      &kp F9             &kp F10
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &none     &none   &none   &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
-&none                 &none                 &none                              &none                                   &none     &none   &tog 1  &tog 2      &none              &tog 4
-                                                                               &trans                                  &none     &none   &none
+&kp F1                &kp F2                &kp F3                             &kp F4                                  &kp F5          &kp F6  &kp F7  &kp F8      &kp F9             &kp F10
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp K_LOCK      &none   &none   &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&none                 &kp K_CUT             &kp K_COPY                         &kp K_PASTE                             &kp CAPSLOCK    &none   &tog 1  &tog 2      &none              &tog 4
+                                                                               &trans                                  &none           &none   &none
             >;
         };
 

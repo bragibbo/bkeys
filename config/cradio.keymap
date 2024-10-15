@@ -26,7 +26,14 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        num_layer {
+            bindings = <&mo 3>;
+            key-positions = <30 33>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -36,7 +43,7 @@
 &kp Q  &kp W  &kp F  &kp P  &kp B             &kp J      &kp L  &kp U      &kp Y    &kp SEMI
 &kp A  &kp R  &kp S  &kp T  &kp G             &kp M      &kp N  &kp E      &kp I    &kp O
 &kp Z  &kp X  &kp C  &kp D  &kp V             &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH
-                     &to 2  &kp LEFT_SHIFT    &kp SPACE  &to 1
+                     &mo 2  &kp LEFT_SHIFT    &kp SPACE  &mo 1
             >;
         };
 

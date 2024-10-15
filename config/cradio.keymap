@@ -16,9 +16,9 @@
             bindings = <&kp>, <&kp>;
         };
 
-        sk: sk {
+        sk: sk_cust {
             compatible = "zmk,behavior-sticky-key";
-            label = "SK";
+            label = "SK_CUST";
             bindings = <&none>;
             #binding-cells = <1>;
             release-after-ms = <2000>;

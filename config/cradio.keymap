@@ -15,39 +15,21 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+
+        sk: sk {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SK";
+            bindings = <&none>;
+            #binding-cells = <1>;
+            release-after-ms = <2000>;
+            ignore-modifiers;
+            quick-release;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
-    combos {
-        compatible = "zmk,combos";
-
-        escape_chord {
-            bindings = <&kp ESCAPE>;
-            key-positions = <10 19>;
-        };
-
-        minus_chord {
-            bindings = <&kp UNDER>;
-            key-positions = <3 6>;
-        };
-
-        dash_chord {
-            bindings = <&kp MINUS>;
-            key-positions = <23 26>;
-        };
-
-        caps_word_chord {
-            bindings = <&caps_word>;
-            key-positions = <20 29>;
-        };
-
-        sys_esc_chord {
-            bindings = <&tog 0>;
-            key-positions = <30 31 32 33>;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -64,7 +46,7 @@
         symbol {
             bindings = <
 &kp ESCAPE  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp TILDE      &kp CARET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GRAVE
-&kp MINUS   &kp ASTERISK      &kp EQUAL       &kp UNDER             &kp DOLLAR     &kp POUND  &kp RIGHT_COMMAND      &kp RIGHT_ALT    &kp RIGHT_CONTROL  &kp RIGHT_SHIFT
+&kp MINUS   &kp ASTERISK      &kp EQUAL       &kp UNDER             &kp DOLLAR     &kp POUND  &sk RIGHT_COMMAND      &sk RIGHT_ALT    &sk RIGHT_CONTROL  &sk RIGHT_SHIFT
 &kp PLUS    &kp PIPE          &kp AT          &kp SLASH             &kp PERCENT    &none      &kp BACKSLASH          &kp AMPERSAND    &kp QUESTION       &kp EXCLAMATION
                                               &none                 &trans         &trans     &trans
             >;
@@ -73,7 +55,7 @@
         nav_num {
             bindings = <
 &kp TAB         &none              &none         &none             &kp C_VOLUME_UP     &none         &kp C_AC_HOME  &kp UP_ARROW  &kp END    &kp DELETE
-&kp LEFT_SHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp C_VOL_DN        &kp CAPSLOCK  &kp LEFT       &kp DOWN      &kp RIGHT  &kp BACKSPACE
+&sk LEFT_SHIFT  &sk RIGHT_CONTROL  &sk LEFT_ALT  &sk LEFT_COMMAND  &kp C_VOL_DN        &kp CAPSLOCK  &kp LEFT       &kp DOWN      &kp RIGHT  &kp BACKSPACE
 &none           &none              &kp K_BACK    &kp K_FORWARD     &kp K_PLAY_PAUSE    &none         &kp PAGE_DOWN  &kp PAGE_UP   &none      &kp ENTER
                                                  &none             &trans              &trans        &none
             >;
@@ -82,7 +64,7 @@
         func_toggle {
             bindings = <
 &kp NUMBER_1    &kp NUMBER_2      &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7       &kp NUMBER_8   &kp NUMBER_9       &kp NUMBER_0
-&kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp F11         &kp F12       &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT
+&sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_COMMAND  &kp F11         &kp F12       &sk RIGHT_COMMAND  &sk RIGHT_ALT  &sk RIGHT_CONTROL  &sk RIGHT_SHIFT
 &kp F1          &kp F2            &kp F3        &kp F4            &kp F5          &kp F6        &kp F7             &kp F8         &kp F9             &kp F10
                                                 &trans            &trans          &trans        &trans
             >;

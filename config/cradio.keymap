@@ -50,27 +50,27 @@
         symbol {
             bindings = <
 &kp ESCAPE  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp TILDE      &kp CARET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GRAVE
-&kp MINUS   &kp ASTERISK      &kp EQUAL       &kp UNDER             &kp DOLLAR     &kp POUND  &none                  &none            &none              &none
+&kp MINUS   &kp ASTERISK      &kp EQUAL       &kp UNDER             &kp DOLLAR     &kp POUND  &kp RIGHT_COMMAND      &kp RIGHT_ALT    &kp RIGHT_CONTROL  &kp RIGHT_SHIFT
 &kp PLUS    &kp PIPE          &kp AT          &kp SLASH             &kp PERCENT    &none      &kp BACKSLASH          &kp AMPERSAND    &kp QUESTION       &kp EXCLAMATION
-                                              &none                 &trans         &trans     &trans
+                                              &trans                &trans         &trans     &trans
             >;
         };
 
         nav_num {
             bindings = <
-&kp TAB  &none  &none       &none          &kp C_VOLUME_UP     &none         &kp C_AC_HOME  &kp UP_ARROW  &kp END    &kp DELETE
-&none    &none  &none       &none          &kp C_VOL_DN        &kp CAPSLOCK  &kp LEFT       &kp DOWN      &kp RIGHT  &kp BACKSPACE
-&none    &none  &kp K_BACK  &kp K_FORWARD  &kp K_PLAY_PAUSE    &none         &kp PAGE_DOWN  &kp PAGE_UP   &none      &kp ENTER
-                            &trans         &trans              &trans        &none
+&kp TAB         &none             &none         &none             &kp C_VOLUME_UP     &none         &kp C_AC_HOME  &kp UP_ARROW  &kp END    &kp DELETE
+&kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp C_VOL_DN        &kp CAPSLOCK  &kp LEFT       &kp DOWN      &kp RIGHT  &kp BACKSPACE
+&none           &none             &kp K_BACK    &kp K_FORWARD     &kp K_PLAY_PAUSE    &none         &kp PAGE_DOWN  &kp PAGE_UP   &none      &kp ENTER
+                                                &trans            &trans              &trans        &trans
             >;
         };
 
         func_toggle {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&none         &none         &none         &none         &kp F11         &kp F12       &none         &none         &none         &none
-&kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
-                                          &trans        &trans          &trans        &trans
+&kp NUMBER_1    &kp NUMBER_2      &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7       &kp NUMBER_8   &kp NUMBER_9       &kp NUMBER_0
+&kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp F11         &kp F12       &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT
+&kp F1          &kp F2            &kp F3        &kp F4            &kp F5          &kp F6        &kp F7             &kp F8         &kp F9             &kp F10
+                                                &trans            &trans          &trans        &trans
             >;
         };
     };
